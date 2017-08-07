@@ -13,9 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
-
 # Architecture
 TARGET_BOARD_SUFFIX := _64
 TARGET_ARCH := arm64
@@ -132,7 +129,7 @@ ifneq ($(QCPATH),)
 BOARD_USES_QCNE := true
 TARGET_LDPRELOAD := libNimsWrap.so
 endif
-BOARD_USES_QCOM_HARDWARE := true
+BOARD_USES_QCOM_HARDWARE := false
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/lenovo/p1a42/rootdir/etc/fstab.qcom
@@ -143,7 +140,7 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += device/lenovo/p1a42/sepolicy
-include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/Android.mk
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
