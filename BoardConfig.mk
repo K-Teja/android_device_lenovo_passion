@@ -79,6 +79,9 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
+# Google Assistant
+ro.opa.eligible_device=true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_p1a42
 TARGET_RECOVERY_DEVICE_MODULES := libinit_p1a42
