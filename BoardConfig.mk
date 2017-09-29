@@ -78,6 +78,9 @@ TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 
+# Google Assistant
+ro.opa.eligible_device=true
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_passion
 TARGET_RECOVERY_DEVICE_MODULES := libinit_passion
@@ -122,7 +125,6 @@ TARGET_SYSTEM_PROP += device/lenovo/passion/system.prop
 # Qualcomm support
 BOARD_USES_QC_TIME_SERVICES := true
 TARGET_POWERHAL_VARIANT := qcom
-TARGET_RIL_VARIANT := caf
 #TARGET_TAP_TO_WAKE_NODE := "/sys/class/tp_gesture/tp_device/tp_gesture_id"
 ifneq ($(QCPATH),)
 BOARD_USES_QCNE := true
@@ -157,3 +159,5 @@ WIFI_DRIVER_MODULE_NAME          := "wlan"
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+USE_PREBUILT_LIBQSAP_SDK := true
